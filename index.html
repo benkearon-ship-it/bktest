@@ -554,6 +554,32 @@ body {
     opacity: 0.9;
 }
 
+/* Video Section */
+.video-section {
+    padding: 6rem 0;
+    background-color: var(--background-white);
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* Contact Section */
 .contact {
     padding: 6rem 0;
@@ -795,8 +821,8 @@ body {
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Schedule Demo</a>
-                    <a href="#features" class="btn btn-secondary">Explore Platform</a>
+                    <a href="mailto:benjamin.kearon@harness.io?subject=Scotiabank%20Demo%20Request&body=Hi%20Benjamin%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20Harness%20for%20Scotiabank.%0A%0AThank%20you%21" class="btn btn-primary">Contact Benjamin</a>
+                    <a href="#challenges" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
         </div>
@@ -986,6 +1012,22 @@ body {
         </div>
     </section>
 
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Citibank Success Story</h2>
+            <p class="section-subtitle">See how Citibank transformed their software delivery with Harness</p>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/NhN7EDF7uTQ"
+                    title="Citibank Harness Case Study"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
@@ -996,19 +1038,19 @@ body {
                     <div class="contact-card">
                         <h3>Schedule a Demo</h3>
                         <p>See Harness in action with a personalized demonstration tailored to Scotiabank's specific requirements and use cases</p>
-                        <a href="https://harness.io/demo" class="btn btn-primary" target="_blank">Book Your Demo</a>
+                        <a href="mailto:benjamin.kearon@harness.io?subject=Scotiabank%20Demo%20Request&body=Hi%20Benjamin%2C%0A%0AI%27m%20interested%20in%20scheduling%20a%20demo%20of%20Harness%20for%20Scotiabank.%0A%0APlease%20let%20me%20know%20your%20availability.%0A%0AThank%20you%21" class="btn btn-primary">Email Benjamin</a>
                     </div>
 
                     <div class="contact-card">
                         <h3>Technical Deep Dive</h3>
-                        <p>Connect with our solutions architects to discuss your deployment challenges and explore custom solutions</p>
-                        <a href="https://harness.io/contact-sales" class="btn btn-secondary" target="_blank">Contact Sales</a>
+                        <p>Connect with our solutions architect to discuss your deployment challenges and explore custom solutions</p>
+                        <a href="mailto:benjamin.kearon@harness.io?subject=Scotiabank%20Technical%20Discussion&body=Hi%20Benjamin%2C%0A%0AI%27d%20like%20to%20discuss%20Scotiabank%27s%20deployment%20challenges%20and%20how%20Harness%20can%20help.%0A%0ALooking%20forward%20to%20connecting.%0A%0AThank%20you%21" class="btn btn-secondary">Contact Benjamin</a>
                     </div>
 
                     <div class="contact-card">
-                        <h3>Start Free Trial</h3>
-                        <p>Experience Harness firsthand with a 14-day trial of our enterprise platform with full feature access</p>
-                        <a href="https://app.harness.io/auth/#/signup" class="btn btn-secondary" target="_blank">Try Free</a>
+                        <h3>Learn More</h3>
+                        <p>Get more information about Harness capabilities and how we can support Scotiabank's transformation</p>
+                        <a href="mailto:benjamin.kearon@harness.io?subject=Scotiabank%20-%20More%20Information&body=Hi%20Benjamin%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20Harness%20for%20Scotiabank.%0A%0AThank%20you%21" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
             </div>
