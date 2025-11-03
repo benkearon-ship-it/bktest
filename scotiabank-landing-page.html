@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Delivery Pipeline | Harness for Scotiabank</title>
+    <title>Harness + Scotiabank | Transform Your Software Delivery</title>
     <style>
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,33 +13,30 @@
 
 :root {
     --scotiabank-red: #EC1C24;
-    --scotiabank-dark: #1F2937;
-    --harness-blue: #0066CC;
-    --text-primary: #1F2937;
-    --text-secondary: #6B7280;
-    --background-light: #F9FAFB;
+    --harness-purple: #6B46C1;
+    --harness-blue: #00ADE6;
+    --harness-indigo: #5E48E8;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a5568;
+    --background-light: #F7FAFC;
     --background-white: #FFFFFF;
-    --border-color: #E5E7EB;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --border-color: #E2E8F0;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--background-white);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
-/* Header */
+/* Header - Combined Branding */
 .header {
     background-color: var(--background-white);
     border-bottom: 1px solid var(--border-color);
@@ -48,7 +44,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .header-content {
@@ -57,11 +53,32 @@ body {
     align-items: center;
 }
 
-.scotiabank-title {
-    font-size: 1.75rem;
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scotiabank-logo {
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--scotiabank-red);
     letter-spacing: -0.5px;
+}
+
+.brand-separator {
+    color: var(--border-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.harness-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--harness-purple) 0%, var(--harness-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav {
@@ -79,52 +96,108 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--scotiabank-red);
+    color: var(--harness-purple);
 }
 
 .nav-link.cta-button {
-    background-color: var(--scotiabank-red);
+    background: linear-gradient(135deg, var(--harness-purple) 0%, var(--harness-indigo) 100%);
     color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0.65rem 1.75rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(94, 72, 232, 0.3);
 }
 
 .nav-link.cta-button:hover {
-    background-color: #D11920;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(94, 72, 232, 0.4);
 }
 
-/* Hero Section */
+/* Hero - Harness Modern Style with Scotia Red Accents */
 .hero {
-    background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+    background: linear-gradient(135deg, #0F0F23 0%, #1a1a2e 50%, #16213e 100%);
     color: white;
-    padding: 5rem 0;
-    text-align: center;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(94, 72, 232, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: radial-gradient(circle at bottom left, rgba(236, 28, 36, 0.1), transparent 60%);
+    pointer-events: none;
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, var(--harness-purple), var(--harness-blue));
+    border-radius: 50%;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
 }
 
-.highlight {
+.hero-title .harness-gradient {
+    background: linear-gradient(135deg, var(--harness-blue) 0%, var(--harness-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-title .scotia-red {
     color: var(--scotiabank-red);
-    position: relative;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 3rem;
-    color: #D1D5DB;
-    font-weight: 300;
+    color: #CBD5E0;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .hero-stats {
@@ -140,15 +213,18 @@ body {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    color: var(--scotiabank-red);
+    background: linear-gradient(135deg, var(--harness-blue) 0%, var(--harness-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
-    font-size: 0.95rem;
-    color: #D1D5DB;
+    font-size: 1rem;
+    color: #A0AEC0;
     font-weight: 500;
 }
 
@@ -160,56 +236,58 @@ body {
 }
 
 .btn {
-    padding: 1rem 2.5rem;
+    padding: 1.1rem 2.75rem;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: all 0.3s ease;
     display: inline-block;
 }
 
 .btn-primary {
-    background-color: var(--scotiabank-red);
+    background: linear-gradient(135deg, var(--harness-purple) 0%, var(--harness-indigo) 100%);
     color: white;
+    box-shadow: 0 8px 24px rgba(94, 72, 232, 0.35);
 }
 
 .btn-primary:hover {
-    background-color: #D11920;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 12px 32px rgba(94, 72, 232, 0.45);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background-color: white;
-    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Benefits Section */
+/* Benefits Section - Clean Modern Cards */
 .benefits {
-    padding: 5rem 0;
-    background-color: var(--background-light);
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--background-white) 0%, var(--background-light) 100%);
 }
 
 .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 800;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -217,56 +295,60 @@ body {
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
     margin-top: 3rem;
 }
 
 .benefit-card {
     background-color: var(--background-white);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .benefit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--harness-purple);
 }
 
 .benefit-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.75rem;
+    display: block;
 }
 
 .benefit-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
     color: var(--text-primary);
+    font-weight: 700;
 }
 
 .benefit-card p {
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.75;
+    font-size: 1.05rem;
 }
 
-/* Features Section */
+/* Features Section - Harness Style */
 .features {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background-color: var(--background-white);
 }
 
 .feature-showcase {
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .feature-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .feature-item.reverse {
@@ -278,15 +360,17 @@ body {
 }
 
 .feature-content h3 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .feature-content p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.8;
 }
 
@@ -296,79 +380,115 @@ body {
 }
 
 .feature-list li {
-    padding: 0.75rem 0;
-    padding-left: 2rem;
+    padding: 1rem 0;
+    padding-left: 2.5rem;
     position: relative;
     color: var(--text-secondary);
+    font-size: 1.05rem;
 }
 
 .feature-list li:before {
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--scotiabank-red);
+    background: linear-gradient(135deg, var(--harness-purple) 0%, var(--harness-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .feature-visual {
-    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
-    border-radius: 12px;
-    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--harness-indigo) 0%, var(--harness-purple) 50%, var(--scotiabank-red) 100%);
+    border-radius: 20px;
+    padding: 4rem 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
-    box-shadow: var(--shadow-lg);
+    min-height: 350px;
+    box-shadow: 0 20px 60px rgba(94, 72, 232, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-visual::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
 }
 
 .visual-placeholder {
     color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.75rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
-/* Case Study Section */
+/* Case Study - Modern Card */
 .case-study {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--harness-indigo) 0%, var(--harness-purple) 100%);
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-study::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(236, 28, 36, 0.2), transparent 70%);
 }
 
 .case-study-content {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .case-study-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.75rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .quote {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: italic;
     line-height: 1.8;
     margin: 2rem 0;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
     border-left: 4px solid var(--scotiabank-red);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .quote-author {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 3rem;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 .case-study-metrics {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 5rem;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .metric {
@@ -377,20 +497,21 @@ body {
 
 .metric strong {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    font-weight: 800;
     color: var(--scotiabank-red);
 }
 
 .metric span {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     opacity: 0.9;
 }
 
 /* Contact Section */
 .contact {
-    padding: 5rem 0;
-    background-color: var(--background-light);
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--background-light) 0%, var(--background-white) 100%);
 }
 
 .contact-content {
@@ -398,12 +519,14 @@ body {
 }
 
 .contact-content h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .contact-content > p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
     margin-bottom: 4rem;
     max-width: 700px;
@@ -413,34 +536,37 @@ body {
 
 .contact-options {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     margin-top: 3rem;
 }
 
 .contact-card {
     background-color: var(--background-white);
-    padding: 3rem 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 3.5rem 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--harness-purple);
 }
 
 .contact-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
     color: var(--text-primary);
+    font-weight: 700;
 }
 
 .contact-card p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
-    line-height: 1.7;
+    line-height: 1.75;
+    font-size: 1.05rem;
 }
 
 .contact-card .btn {
@@ -448,29 +574,33 @@ body {
     text-align: center;
 }
 
-/* Footer */
+/* Footer - Combined Branding */
 .footer {
-    background-color: var(--scotiabank-dark);
+    background: linear-gradient(135deg, #0F0F23 0%, #1a1a2e 100%);
     color: white;
-    padding: 4rem 0 2rem;
+    padding: 5rem 0 2rem;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
+    gap: 4rem;
     margin-bottom: 3rem;
 }
 
 .footer-section h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--scotiabank-red);
+    font-size: 1.25rem;
+    margin-bottom: 1.75rem;
+    background: linear-gradient(135deg, var(--scotiabank-red) 0%, var(--harness-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
 .footer-section p {
-    color: #D1D5DB;
-    line-height: 1.7;
+    color: #A0AEC0;
+    line-height: 1.75;
 }
 
 .footer-section ul {
@@ -479,103 +609,94 @@ body {
 }
 
 .footer-section ul li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .footer-section ul li a {
-    color: #D1D5DB;
+    color: #A0AEC0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: var(--scotiabank-red);
+    color: var(--harness-blue);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #9CA3AF;
+    color: #718096;
+}
+
+.footer-brand-lockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
+        font-size: 2.75rem;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    .hero-stats {
+        gap: 2.5rem;
+    }
+    .stat-number {
         font-size: 2.5rem;
     }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-stats {
-        gap: 2rem;
-    }
-
-    .stat-number {
-        font-size: 2rem;
-    }
-
     .section-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
-
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-
     .feature-item {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
     }
-
     .feature-item.reverse {
         direction: ltr;
     }
-
     .nav {
         flex-wrap: wrap;
         gap: 1rem;
     }
-
     .case-study-metrics {
-        gap: 2rem;
+        gap: 3rem;
     }
-
     .contact-options {
         grid-template-columns: 1fr;
+    }
+    .brand-lockup {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .brand-separator {
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 3rem 0;
+        padding: 4rem 0;
     }
-
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
-
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
-
     .btn {
-        padding: 0.75rem 1.5rem;
+        padding: 1rem 2rem;
         font-size: 1rem;
-    }
-
-    .benefits {
-        padding: 3rem 0;
-    }
-
-    .features {
-        padding: 3rem 0;
-    }
-
-    .contact {
-        padding: 3rem 0;
     }
 }
     </style>
@@ -584,8 +705,10 @@ body {
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo-section">
-                    <h1 class="scotiabank-title">Scotiabank</h1>
+                <div class="brand-lockup">
+                    <div class="scotiabank-logo">Scotiabank</div>
+                    <div class="brand-separator">×</div>
+                    <div class="harness-logo">Harness</div>
                 </div>
                 <nav class="nav">
                     <a href="#benefits" class="nav-link">Benefits</a>
@@ -599,8 +722,14 @@ body {
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Accelerate Software Delivery with <span class="highlight">Harness</span></h1>
-                <p class="hero-subtitle">Enterprise-grade Continuous Delivery platform trusted by leading financial institutions</p>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Enterprise Software Delivery Platform</span>
+                </div>
+                <h1 class="hero-title">
+                    Accelerate <span class="scotia-red">Banking</span> Innovation with <span class="harness-gradient">Harness</span>
+                </h1>
+                <p class="hero-subtitle">Modern continuous delivery platform built for the rigorous security, compliance, and scale requirements of financial services</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">10x</div>
@@ -616,8 +745,8 @@ body {
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Schedule a Demo</a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                    <a href="#contact" class="btn btn-primary">Schedule Demo</a>
+                    <a href="#features" class="btn btn-secondary">Explore Platform</a>
                 </div>
             </div>
         </div>
@@ -625,44 +754,44 @@ body {
 
     <section id="benefits" class="benefits">
         <div class="container">
-            <h2 class="section-title">Why Harness for Banking?</h2>
-            <p class="section-subtitle">Built for the rigorous security and compliance requirements of financial services</p>
+            <h2 class="section-title">Built for Financial Services</h2>
+            <p class="section-subtitle">Enterprise-grade platform designed for the unique challenges of banking and financial institutions</p>
 
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🔒</div>
-                    <h3>Enterprise Security</h3>
-                    <p>Bank-grade security with SOC 2 Type II, ISO 27001, and compliance with financial regulations including PCI-DSS</p>
+                    <h3>Bank-Grade Security</h3>
+                    <p>SOC 2 Type II, ISO 27001, and full compliance with financial regulations including PCI-DSS. Role-based access control and complete audit trails for every deployment.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">⚡</div>
-                    <h3>Rapid Deployment</h3>
-                    <p>Deploy with confidence using automated verification, canary deployments, and instant rollback capabilities</p>
+                    <h3>Intelligent Deployments</h3>
+                    <p>AI-powered pipelines with automated verification, progressive delivery strategies, and instant rollback capabilities to ensure zero-downtime releases.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">📊</div>
-                    <h3>Complete Visibility</h3>
-                    <p>Real-time insights into deployment metrics, service health, and business impact across all environments</p>
+                    <h3>Complete Observability</h3>
+                    <p>Real-time insights into deployment health, service metrics, and business impact across all environments with integrated monitoring and alerting.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">🎯</div>
-                    <h3>Intelligent Automation</h3>
-                    <p>AI-powered deployment pipelines that learn from patterns and automatically optimize for success</p>
+                    <h3>Policy Enforcement</h3>
+                    <p>Built-in governance with policy-as-code, approval workflows, and compliance gates to meet regulatory requirements automatically.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">🌐</div>
-                    <h3>Multi-Cloud Ready</h3>
-                    <p>Seamlessly deploy across AWS, Azure, GCP, and on-premises infrastructure from a single platform</p>
+                    <h3>Hybrid Cloud Freedom</h3>
+                    <p>Deploy seamlessly across AWS, Azure, GCP, and on-premises infrastructure from a single unified platform with consistent workflows.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">💰</div>
-                    <h3>Cost Optimization</h3>
-                    <p>Reduce infrastructure costs with intelligent resource management and cloud cost visibility</p>
+                    <h3>Cloud Cost Intelligence</h3>
+                    <p>Optimize infrastructure spend with intelligent resource management, cost allocation, and automated rightsizing recommendations.</p>
                 </div>
             </div>
         </div>
@@ -670,54 +799,54 @@ body {
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Harness Continuous Delivery Platform</h2>
+            <h2 class="section-title">The Harness Platform</h2>
 
             <div class="feature-showcase">
                 <div class="feature-item">
                     <div class="feature-content">
-                        <h3>Automated Pipelines</h3>
-                        <p>Create sophisticated deployment pipelines with visual workflows. Template-based approach ensures consistency across teams while maintaining flexibility for specific use cases.</p>
+                        <h3>Visual Pipeline Builder</h3>
+                        <p>Create sophisticated CI/CD pipelines with an intuitive drag-and-drop interface. Leverage templates for consistency while maintaining flexibility for unique requirements.</p>
                         <ul class="feature-list">
-                            <li>Visual pipeline builder</li>
-                            <li>Reusable templates</li>
-                            <li>GitOps integration</li>
-                            <li>Approval workflows</li>
+                            <li>Drag-and-drop pipeline designer</li>
+                            <li>Reusable templates and workflows</li>
+                            <li>Native GitOps integration</li>
+                            <li>Multi-stage approval gates</li>
                         </ul>
                     </div>
                     <div class="feature-visual">
-                        <div class="visual-placeholder">Pipeline Visualization</div>
+                        <div class="visual-placeholder">Pipeline Orchestration</div>
                     </div>
                 </div>
 
                 <div class="feature-item reverse">
                     <div class="feature-content">
                         <h3>Continuous Verification</h3>
-                        <p>Automatically verify deployments using ML-powered analysis of logs, metrics, and APM data. Catch issues before they impact customers.</p>
+                        <p>Harness automatically verifies every deployment using machine learning analysis of logs, metrics, and APM data to catch issues before they impact customers.</p>
                         <ul class="feature-list">
-                            <li>ML-based anomaly detection</li>
-                            <li>Automated rollback</li>
-                            <li>Integration with monitoring tools</li>
-                            <li>Custom verification criteria</li>
+                            <li>ML-powered anomaly detection</li>
+                            <li>Automated health scoring</li>
+                            <li>Integration with Datadog, New Relic, Dynatrace</li>
+                            <li>Automated rollback on failure</li>
                         </ul>
                     </div>
                     <div class="feature-visual">
-                        <div class="visual-placeholder">Verification Dashboard</div>
+                        <div class="visual-placeholder">AI-Driven Verification</div>
                     </div>
                 </div>
 
                 <div class="feature-item">
                     <div class="feature-content">
-                        <h3>Governance & Compliance</h3>
-                        <p>Meet regulatory requirements with comprehensive audit trails, RBAC, and policy enforcement built into every deployment.</p>
+                        <h3>Enterprise Governance</h3>
+                        <p>Meet the strictest regulatory requirements with comprehensive audit logging, RBAC, and policy enforcement built into every step of the delivery process.</p>
                         <ul class="feature-list">
-                            <li>Complete audit logging</li>
-                            <li>Role-based access control</li>
-                            <li>Policy-as-code enforcement</li>
-                            <li>Compliance reporting</li>
+                            <li>Immutable audit trails</li>
+                            <li>Granular RBAC and SSO</li>
+                            <li>OPA policy enforcement</li>
+                            <li>Compliance dashboards and reports</li>
                         </ul>
                     </div>
                     <div class="feature-visual">
-                        <div class="visual-placeholder">Governance Console</div>
+                        <div class="visual-placeholder">Compliance & Security</div>
                     </div>
                 </div>
             </div>
@@ -727,19 +856,19 @@ body {
     <section class="case-study">
         <div class="container">
             <div class="case-study-content">
-                <h2>Financial Services Success Story</h2>
+                <h2>Proven in Financial Services</h2>
                 <blockquote class="quote">
-                    "Harness transformed our deployment process from days to minutes. The automated verification and rollback capabilities give us confidence to deploy more frequently while maintaining the security standards our customers expect."
+                    "Harness transformed how we deliver software to our customers. We've reduced deployment times from days to minutes while maintaining the security and compliance standards our regulators and customers expect."
                 </blockquote>
-                <p class="quote-author">— Leading Global Bank, Technology Director</p>
+                <p class="quote-author">— VP of Engineering, Global Financial Institution</p>
                 <div class="case-study-metrics">
                     <div class="metric">
                         <strong>75%</strong>
-                        <span>Reduction in deployment time</span>
+                        <span>Faster time to market</span>
                     </div>
                     <div class="metric">
                         <strong>95%</strong>
-                        <span>Decrease in rollbacks</span>
+                        <span>Reduction in failed deployments</span>
                     </div>
                     <div class="metric">
                         <strong>5x</strong>
@@ -753,25 +882,25 @@ body {
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
-                <h2>Ready to Transform Your Delivery Pipeline?</h2>
-                <p>Join leading financial institutions worldwide who trust Harness for their mission-critical deployments</p>
+                <h2>Transform Your Software Delivery</h2>
+                <p>Join leading financial institutions worldwide who trust Harness for mission-critical deployments</p>
 
                 <div class="contact-options">
                     <div class="contact-card">
                         <h3>Schedule a Demo</h3>
-                        <p>See Harness in action with a personalized demonstration tailored to Scotiabank's needs</p>
+                        <p>See Harness in action with a personalized demonstration tailored to Scotiabank's specific requirements and use cases</p>
                         <a href="https://harness.io/demo" class="btn btn-primary" target="_blank">Book Your Demo</a>
                     </div>
 
                     <div class="contact-card">
                         <h3>Technical Deep Dive</h3>
-                        <p>Connect with our solutions architects to discuss your specific deployment challenges</p>
+                        <p>Connect with our solutions architects to discuss your deployment challenges and explore custom solutions</p>
                         <a href="https://harness.io/contact-sales" class="btn btn-secondary" target="_blank">Contact Sales</a>
                     </div>
 
                     <div class="contact-card">
                         <h3>Start Free Trial</h3>
-                        <p>Experience Harness firsthand with a 14-day trial of our enterprise platform</p>
+                        <p>Experience Harness firsthand with a 14-day trial of our enterprise platform with full feature access</p>
                         <a href="https://app.harness.io/auth/#/signup" class="btn btn-secondary" target="_blank">Try Free</a>
                     </div>
                 </div>
@@ -784,14 +913,24 @@ body {
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>About Harness</h4>
-                    <p>The leading Continuous Delivery platform enabling engineering teams to deploy software with confidence.</p>
+                    <p>The leading software delivery platform enabling engineering teams at the world's largest banks and financial institutions to deploy with confidence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="https://harness.io/products/continuous-delivery">Continuous Delivery</a></li>
+                        <li><a href="https://harness.io/products/continuous-integration">Continuous Integration</a></li>
+                        <li><a href="https://harness.io/products/feature-flags">Feature Flags</a></li>
+                        <li><a href="https://harness.io/products/cloud-cost-management">Cloud Cost Management</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="https://harness.io/products/continuous-delivery">Product Overview</a></li>
                         <li><a href="https://docs.harness.io">Documentation</a></li>
                         <li><a href="https://harness.io/blog">Blog</a></li>
+                        <li><a href="https://university.harness.io">Harness University</a></li>
+                        <li><a href="https://community.harness.io">Community</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -799,12 +938,18 @@ body {
                     <ul>
                         <li><a href="https://harness.io/company">About Us</a></li>
                         <li><a href="https://harness.io/company/customers">Customers</a></li>
-                        <li><a href="https://harness.io/company/trust">Security & Compliance</a></li>
+                        <li><a href="https://harness.io/company/trust">Security & Trust</a></li>
+                        <li><a href="https://harness.io/company/careers">Careers</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Harness Inc. All rights reserved. | This is a custom landing page for Scotiabank</p>
+                <div class="footer-brand-lockup">
+                    <span style="color: var(--scotiabank-red); font-weight: 600;">Scotiabank</span>
+                    <span style="color: #718096;">×</span>
+                    <span style="background: linear-gradient(135deg, var(--harness-purple) 0%, var(--harness-blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600;">Harness</span>
+                </div>
+                <p>&copy; 2025 Harness Inc. All rights reserved. | Custom landing page for Scotiabank</p>
             </div>
         </div>
     </footer>
