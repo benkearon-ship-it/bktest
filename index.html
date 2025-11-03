@@ -471,6 +471,21 @@ body {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
 }
 
+.feature-screenshot {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+}
+
+.screenshot-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
 .visual-placeholder {
     color: white;
     font-size: 1.75rem;
@@ -940,49 +955,49 @@ body {
             <div class="feature-showcase">
                 <div class="feature-item">
                     <div class="feature-content">
-                        <h3>Visual Pipeline Builder</h3>
-                        <p>Create sophisticated CI/CD pipelines with an intuitive drag-and-drop interface. Leverage templates for consistency while maintaining flexibility for unique requirements.</p>
+                        <h3>Canary Deployments</h3>
+                        <p>Deploy with confidence using progressive delivery strategies. Harness provides out-of-the-box canary and blue/green deployments with automated traffic shifting and instant rollback capabilities.</p>
                         <ul class="feature-list">
-                            <li>Drag-and-drop pipeline designer</li>
-                            <li>Reusable templates and workflows</li>
-                            <li>Native GitOps integration</li>
-                            <li>Multi-stage approval gates</li>
+                            <li>Automated canary analysis with no scripting</li>
+                            <li>Progressive traffic shifting based on metrics</li>
+                            <li>Instant automated rollback on failures</li>
+                            <li>Support for Kubernetes, VMs, and serverless</li>
                         </ul>
                     </div>
-                    <div class="feature-visual">
-                        <div class="visual-placeholder">Pipeline Orchestration</div>
+                    <div class="feature-visual feature-screenshot">
+                        <img src="https://via.placeholder.com/800x500/6B46C1/FFFFFF?text=Canary+Deployment+Screenshot" alt="Harness Canary Deployment Dashboard" class="screenshot-img">
                     </div>
                 </div>
 
                 <div class="feature-item reverse">
                     <div class="feature-content">
-                        <h3>Continuous Verification</h3>
-                        <p>Harness automatically verifies every deployment using machine learning analysis of logs, metrics, and APM data to catch issues before they impact customers.</p>
+                        <h3>Templatized Pipelines</h3>
+                        <p>Build once, reuse everywhere. Create standardized pipeline templates that ensure consistency across teams while allowing flexibility for specific use cases. Reduce maintenance by 70%.</p>
                         <ul class="feature-list">
-                            <li>ML-powered anomaly detection</li>
-                            <li>Automated health scoring</li>
-                            <li>Integration with Datadog, New Relic, Dynatrace</li>
-                            <li>Automated rollback on failure</li>
+                            <li>Reusable templates across all environments</li>
+                            <li>Version control and change tracking</li>
+                            <li>Input sets for runtime customization</li>
+                            <li>Organization-wide template library</li>
                         </ul>
                     </div>
-                    <div class="feature-visual">
-                        <div class="visual-placeholder">AI-Driven Verification</div>
+                    <div class="feature-visual feature-screenshot">
+                        <img src="https://via.placeholder.com/800x500/5E48E8/FFFFFF?text=Pipeline+Templates+Screenshot" alt="Harness Pipeline Templates" class="screenshot-img">
                     </div>
                 </div>
 
                 <div class="feature-item">
                     <div class="feature-content">
-                        <h3>Enterprise Governance</h3>
-                        <p>Meet the strictest regulatory requirements with comprehensive audit logging, RBAC, and policy enforcement built into every step of the delivery process.</p>
+                        <h3>Continuous Verification</h3>
+                        <p>Harness automatically verifies every deployment using machine learning analysis of logs, metrics, and APM data from Dynatrace and Splunk. Catch issues before they impact customers.</p>
                         <ul class="feature-list">
-                            <li>Immutable audit trails</li>
-                            <li>Granular RBAC and SSO</li>
-                            <li>OPA policy enforcement</li>
-                            <li>Compliance dashboards and reports</li>
+                            <li>ML-powered anomaly detection</li>
+                            <li>Automated health scoring</li>
+                            <li>Dynatrace and Splunk integration</li>
+                            <li>Automated rollback on failure</li>
                         </ul>
                     </div>
-                    <div class="feature-visual">
-                        <div class="visual-placeholder">Compliance & Security</div>
+                    <div class="feature-visual feature-screenshot">
+                        <img src="https://via.placeholder.com/800x500/EC1C24/FFFFFF?text=Continuous+Verification+Screenshot" alt="Harness Continuous Verification Dashboard" class="screenshot-img">
                     </div>
                 </div>
             </div>
