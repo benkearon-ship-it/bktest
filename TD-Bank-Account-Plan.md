@@ -283,7 +283,7 @@ Date: November 2025
 **CI/CD Integration**
 - Jenkins migration path
 - GitHub Actions integration
-- GitLab compatibility
+- Octopus Deploy compatibility
 - Existing tool preservation
 
 **Cloud & Infrastructure**
@@ -345,22 +345,26 @@ Date: November 2025
 
 ### Why Harness vs. Alternatives
 
-| Capability | Harness | GitLab | Jenkins | Spinnaker |
-|------------|---------|--------|---------|-----------|
-| **Continuous Verification** | ✅ Native ML-based | ❌ Limited | ❌ None | ⚠️ Basic |
-| **Multi-Cloud Native** | ✅ AWS, Azure, GCP | ⚠️ Limited | ❌ Manual | ⚠️ K8s only |
-| **Templates & Governance** | ✅ Enterprise-grade | ⚠️ Basic | ❌ Manual | ⚠️ Limited |
-| **Financial Services Focus** | ✅ Major banks | ⚠️ Some | ❌ DIY | ⚠️ Limited |
-| **Automated Rollback** | ✅ Intelligent | ❌ Manual | ❌ Manual | ⚠️ Basic |
-| **Enterprise Support** | ✅ 24/7 + TAM | ⚠️ Paid tier | ❌ Community | ⚠️ Limited |
-| **Deployment Strategies** | ✅ All built-in | ⚠️ Limited | ❌ Scripting | ⚠️ K8s only |
+| Capability | Harness | GitHub Actions | Octopus Deploy | Jenkins |
+|------------|---------|----------------|----------------|---------|
+| **Continuous Verification** | ✅ Native ML-based | ❌ None | ❌ Manual | ❌ None |
+| **Multi-Cloud Native** | ✅ AWS, Azure, GCP | ⚠️ Limited | ✅ Yes | ❌ Manual |
+| **Templates & Governance** | ✅ Enterprise-grade | ⚠️ Basic | ⚠️ Basic | ❌ Manual |
+| **Financial Services Focus** | ✅ Major banks | ❌ General purpose | ⚠️ Some | ❌ DIY |
+| **Automated Rollback** | ✅ Intelligent | ❌ Manual | ⚠️ Manual | ❌ Manual |
+| **Enterprise Support** | ✅ 24/7 + TAM | ⚠️ GitHub Enterprise | ✅ Yes | ❌ Community |
+| **Deployment Strategies** | ✅ All built-in | ❌ Scripting required | ⚠️ Limited | ❌ Scripting |
+| **Pipeline Visualization** | ✅ Real-time insights | ⚠️ Basic | ⚠️ Basic | ⚠️ Plugin-based |
+| **GitOps Native** | ✅ Built-in | ⚠️ Third-party | ❌ Limited | ❌ Manual |
+| **Cost Management** | ✅ Included | ❌ Separate tool | ❌ None | ❌ None |
 
 **Harness Advantages**:
-- Purpose-built for enterprises
-- Proven in top-tier banks
-- AI/ML-powered verification
-- Faster time to value
-- Lower total cost of ownership
+- **vs GitHub Actions**: Purpose-built for CD with advanced deployment strategies, continuous verification, and multi-cloud orchestration vs. basic workflow automation
+- **vs Octopus Deploy**: AI/ML-powered verification, unified CI/CD/FF/CCM platform, superior governance and compliance features for financial services
+- **vs Jenkins**: Zero maintenance overhead, enterprise-grade templates, intelligent automation vs. manual scripting and plugin management
+- Proven in top-tier banks (Citibank, Capital One, JPMorgan)
+- Faster time to value with 60-70% less implementation effort
+- Lower total cost of ownership over 3 years
 
 ---
 
@@ -565,9 +569,9 @@ Date: November 2025
 
 **Source Control**
 - ✅ GitHub Enterprise
-- ✅ GitLab
 - ✅ Bitbucket
 - ✅ Azure Repos
+- ✅ AWS CodeCommit
 
 **Container Orchestration**
 - ✅ AWS EKS
